@@ -28,10 +28,10 @@ class Forwarder():
 
     def callback(self, ch, method, properties, body):
         print(method)
-        self.logger.error(f'Logged at {datetime.fromtimestamp(properties.timestamp)}: action {method.routing_key}', extra={
+        self.logger.error(f'Logged at {datetime.fromtimestamp(properties.timestamp)}: action {method.routing_key}. Details: {properties.headers}', extra={
             'tags': {
                 'exchange': method.exchange,
-                'action': method.routing_key
+                'action': method.routing_key,
             }
         })
         ch.basic_ack(delivery_tag = method.delivery_tag)
