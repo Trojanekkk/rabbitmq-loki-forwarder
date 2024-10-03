@@ -25,5 +25,5 @@ For almost 100% you will want to configure the app to make it work within your e
 For example:
 
 ```
-docker run -d -e FORWARDER_LOKI_HOST=192.168.1.1 -e FORWARDER_LOKI_PORT=4321 ghcr.io/trojanekkk/rabbitmq-loki-forwarder
+docker run -d -e FORWARDER_LOKI_HOST=192.168.1.1 -e FORWARDER_LOKI_PORT=4321 ghcr.io/trojanekkk/rabbitmq-loki-forwarder:latest
 ```
