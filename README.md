@@ -8,7 +8,7 @@ For more details look for _Event Exchange Plugin_.
 Run the app in the docker container with the default setup:
 
 ```
-docker run -d ghcr.io/trojanekkk/rabbitmq-loki-forwarder
+docker run -d ghcr.io/trojanekkk/rabbitmq-loki-forwarder:1.0.0
 ```
 
 For almost 100% you will want to configure the app to make it work within your environment. To modify the default behaviour use environment variables. The following are allowed:
@@ -25,5 +25,5 @@ For almost 100% you will want to configure the app to make it work within your e
 For example:
 
 ```
-docker run -d -e FORWARDER_LOKI_HOST=192.168.1.1 -e FORWARDER_LOKI_PORT=4321 ghcr.io/trojanekkk/rabbitmq-loki-forwarder:latest
+docker run -d -e FORWARDER_LOKI_HOST=192.168.1.1 -e FORWARDER_LOKI_PORT=4321 ghcr.io/trojanekkk/rabbitmq-loki-forwarder:1.0.0
 ```
